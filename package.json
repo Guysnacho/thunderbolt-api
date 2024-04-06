@@ -21,11 +21,11 @@
     "test": "cross-env jest",
     "seed": "cross-env medusa seed -f ./data/seed.json",
     "start": "cross-env npm run build && medusa start",
+    "start:prod": "cross-env medusa migrations run && medusa start",
     "start:custom": "cross-env npm run build && node --preserve-symlinks --trace-warnings index.js",
     "dev": "cross-env npm run build:server && medusa develop"
   },
   "dependencies": {
-    "@medusajs/admin": "latest",
     "@medusajs/cache-inmemory": "latest",
     "@medusajs/cache-redis": "latest",
     "@medusajs/event-bus-local": "latest",
@@ -48,6 +48,7 @@
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/preset-typescript": "^7.21.4",
+    "@medusajs/admin": "latest",
     "@medusajs/medusa-cli": "latest",
     "@stdlib/number-float64-base-normalize": "0.0.8",
     "@types/express": "^4.17.13",
