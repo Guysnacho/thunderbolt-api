@@ -53,7 +53,7 @@ const plugins = [
         open: process.env.OPEN_BROWSER !== "false",
       },
       serve: process.env.NODE_ENV === "development",
-      // backend: process.env.NODE_ENV === "development" ? MEDUSA_ADMIN_BACKEND_URL : undefined,
+      backend: process.env.NODE_ENV === "development" ? MEDUSA_ADMIN_BACKEND_URL : undefined,
     },
   },
 ];
