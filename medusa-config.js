@@ -33,6 +33,8 @@ const DATABASE_URL =
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
+const MEDUSA_ADMIN_BACKEND_URL = process.env.MEDUSA_ADMIN_BACKEND_URL || "http://localhost:9001";
+
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
@@ -51,6 +53,7 @@ const plugins = [
         open: process.env.OPEN_BROWSER !== "false",
       },
       serve: process.env.NODE_ENV === "development",
+      // backend: process.env.NODE_ENV === "development" ? MEDUSA_ADMIN_BACKEND_URL : undefined,
     },
   },
 ];
