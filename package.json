@@ -16,6 +16,7 @@
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
     "build": "cross-env npm run clean && npm run build:server && npm run build:admin",
     "build:server": "cross-env npm run clean && tsc -p tsconfig.server.json",
+    "deploy:server": "cross-env npm run clean && npm run build:server",
     "build:admin": "cross-env medusa-admin build",
     "deploy:admin": "cross-env medusa-admin build --deployment",
     "watch": "cross-env tsc --watch",
